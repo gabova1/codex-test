@@ -1,0 +1,40 @@
+:root {
+  color-scheme: dark;
+  --color-bg: #0b1120;
+  --color-surface: #111827;
+  --color-surface-alt: #1f2937;
+  --color-border: #1e293b;
+  --color-muted: #94a3b8;
+  --color-text: #e2e8f0;
+  --color-accent: #33ffce;
+  --color-danger: #f87171;
+  --shadow-lg: 0 24px 48px rgba(8, 15, 35, 0.5);
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

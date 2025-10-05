@@ -1,0 +1,506 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(51, 255, 206, 0.08), transparent 55%), var(--color-bg);
+}
+
+.topNav {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 24px;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoMark {
+  background: linear-gradient(135deg, #33ffce, #0ea5e9);
+  color: #020617;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.logoTitle {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  margin: 0;
+}
+
+.logoSubtitle {
+  color: var(--color-muted);
+  font-size: 12px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.navTabs {
+  display: flex;
+  gap: 12px;
+}
+
+.navTab {
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.navTab:hover,
+.navTabActive {
+  background: rgba(51, 255, 206, 0.12);
+  color: var(--color-text);
+}
+
+.metricsRow {
+  display: flex;
+  gap: 16px;
+}
+
+.metricTile {
+  background: var(--color-surface);
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(51, 255, 206, 0.12);
+  min-width: 180px;
+  box-shadow: var(--shadow-lg);
+}
+
+.metricLabel {
+  font-size: 12px;
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.metricValue,
+.metricValueLarge {
+  margin: 6px 0 0;
+  font-weight: 600;
+}
+
+.metricValueLarge {
+  font-size: 24px;
+}
+
+.navActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navButton {
+  border: none;
+  background: linear-gradient(135deg, #33ffce, #0ea5e9);
+  color: #020617;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 999px;
+  box-shadow: 0 12px 24px rgba(14, 165, 233, 0.35);
+}
+
+.main {
+  flex: 1;
+  padding: 32px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr) 360px;
+  gap: 24px;
+}
+
+.sidebar,
+.mainColumn,
+.secondaryColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel {
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.panelTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.panelSubtitle {
+  margin: 4px 0 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.panelActions,
+.panelFilters {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.smallButton {
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--color-text);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #33ffce, #0ea5e9);
+  color: #020617;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 600;
+  box-shadow: 0 12px 24px rgba(14, 165, 233, 0.35);
+}
+
+.walletList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 560px;
+  overflow: auto;
+}
+
+.walletCard {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: var(--color-surface-alt);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.walletAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.walletInfo {
+  flex: 1;
+}
+
+.walletName {
+  margin: 0;
+  font-weight: 600;
+}
+
+.walletAddress {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.walletStats {
+  text-align: right;
+}
+
+.walletPnl {
+  margin: 0;
+  font-weight: 600;
+  color: #34d399;
+}
+
+.walletValue {
+  margin: 4px 0 0;
+  color: var(--color-muted);
+}
+
+.chartWrapper {
+  height: 280px;
+}
+
+.chartTooltip {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(51, 255, 206, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.chartTooltipLabel {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.chartTooltipValue {
+  margin: 4px 0 0;
+  font-weight: 600;
+}
+
+.chartFooter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.tableWrapper {
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-size: 12px;
+  color: var(--color-muted);
+  font-weight: 500;
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.table td {
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  padding: 14px 0;
+  font-size: 14px;
+}
+
+.placeholder,
+.placeholderRow {
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.assetCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.assetCell img {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.assetName {
+  margin: 0;
+  font-weight: 600;
+}
+
+.assetSymbol {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(51, 255, 206, 0.12);
+  color: var(--color-accent);
+  font-size: 12px;
+}
+
+.filterTag {
+  background: rgba(15, 23, 42, 0.8);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.positive {
+  color: #34d399;
+}
+
+.negative {
+  color: var(--color-danger);
+}
+
+.whaleList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.whaleItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--color-surface-alt);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.whaleAddress {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.whaleDescription {
+  margin: 4px 0 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.whaleMeta {
+  text-align: right;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+.whaleValue {
+  display: block;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.whaleTime {
+  margin-top: 4px;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.86);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 40;
+}
+
+.modal {
+  width: min(480px, 100%);
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid rgba(51, 255, 206, 0.12);
+  box-shadow: var(--shadow-lg);
+}
+
+.modalTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modalDescription {
+  margin: 12px 0 24px;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.modalError {
+  margin-top: 12px;
+  color: var(--color-danger);
+  font-size: 14px;
+}
+
+.modalLabel {
+  font-size: 13px;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+.modalInput:focus {
+  outline: none;
+  border-color: rgba(51, 255, 206, 0.4);
+  box-shadow: 0 0 0 3px rgba(51, 255, 206, 0.1);
+}
+
+.modalHint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-muted);
+  word-break: break-all;
+}
+
+.modalActions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.airdropList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 1280px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .mainColumn,
+  .secondaryColumn {
+    order: initial;
+  }
+}
+
+@media (max-width: 960px) {
+  .topNav {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .metricsRow,
+  .navTabs {
+    flex-wrap: wrap;
+  }
+
+  .dashboardGrid {
+    padding-bottom: 80px;
+  }
+}
